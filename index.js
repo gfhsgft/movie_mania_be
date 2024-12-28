@@ -55,6 +55,10 @@ app.post("/login", async (req, res) => {
   res.json({ message: "Login successful." });
 });
 
+app.get("/", (req, res) => {
+  res.send("Server is running!");
+});
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server running!`);
