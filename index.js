@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const cors = require("cors"); 
 const PORT = 6001;
 require("dotenv").config();
 
 // Middleware to parse JSON
 app.use(express.json());
+app.use(cors());
 
 // Connect to MongoDB
 mongoose
